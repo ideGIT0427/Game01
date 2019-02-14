@@ -32,5 +32,10 @@ void Game::Update()
 		5.0f
 	);
 	m_rotation *= qAddRot;
+
 	m_skinModelRender->SetRotation(m_rotation);
+
+
+	m_position.x += Pad(0).GetLStickXF()*-2.0f;
+	m_skinModelRender->SetPosition(m_position);
 }
